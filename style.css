@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+*{
+    padding: 0;
+    margin: 0;
+    cursor:url("./resimler/cursor.png"), auto;
+}
+body,html{
+    overflow:hidden;
+    width:100%;
+    height:100%
+}
+@font-face{
+    font-family:Army;
+    src:url(./fontlar/Distress.ttf)
+}
+@font-face {
+    font-family: Akira;
+    src: url("./fontlar/Akira.otf")
+}
+
+@font-face {
+    font-family: Evogria;
+    src: url(./fontlar/Evogria.otf)
+}
+@font-face{
+    font-family:Gretaros;
+    src:url(./fontlar/Gretaros-Regular.otf)
+}
+body{    
+    background-color: #0d0d0d;
+    color: #fff;
+    font-family: Inter;
+    font-weight: 500;
+    background-image: url("./resimler/books.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+.menubtn {
+    width: 75%;
+    height: 65px;
+    cursor: pointer;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    outline: 0;
+    z-index: 2;
+    transition: .2s ease-in-out;
+    padding: 20px;
+    text-align: left;
+    font-size: 22px;
+    font-family: Evogria;
+    color: #fff;
+    display: flex
+;
+    align-items: center;
+    border-radius: 10px;
+}
+.sirabizdeKutu{    
+    display: flex
+    ;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px;
+}
+.takimisim{
+    width: 100%;
+    text-align: center;
+}
+#loading,.cenkLogo,.back,.anamenu,.takimekrani,.galip,.oyun,.yanlis,.dogru,.surebitti,#takimBari, .transparan, .nasiloynanir{
+    display: none;
+}
+.dogru,.yanlis,.surebitti{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+width: 300px;
+height: 300px;
+backdrop-filter: blur(46px) saturate(180%);
+-webkit-backdrop-filter: blur(14px) saturate(180%);
+background-color: rgba(255, 255, 255, 0.14);
+border-radius: 12px;
+border: 1px solid rgba(255, 255, 255, 0.125);
+z-index: 2;
+box-sizing: border-box;
+padding: 20px;
+background-size: 100%;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  option{
+    color: black;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+.yenisoru{
+    width: 100%;        
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: #fff;
+    height: 60px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d0db0;
+}
+.galip{
+    z-index: 3;
+    background-image: url("./resimler/galip.png");
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.anamenu {
+    width: 800px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.galipgeldi,.galiptakim{
+    text-align: center;
+    font-family: Akira;
+    font-size: 34px;
+}
+#container{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.baslat,#loading{
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.kutular{
+    background:#f72f0b;
+    background:linear-gradient(0deg,rgba(247,47,11,.45) 0,rgba(247,137,23,.45) 100%);
+    width:336px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:-60px 20px 45px 3px;
+    height:412px;
+    border-radius:17px
+}
+.resimlerimiz{
+    position:relative;
+    top:-13%;
+    width:175px;
+    height:175px;
+    object-fit:cover;
+    border-radius:200px
+}
+.bar2{
+    border-radius:12px;
+    width:100%;
+    height:30px;
+}
+.bar1{
+    width:50%;
+    border-radius:12px 0 0 12px;
+    height:100%
+}
+.text-animation{
+    display:none;
+    position:relative;
+    color:#f5f5f5;
+    font-size:50px;
+    font-family:"Passion One",sans-serif;
+    letter-spacing:1px;
+    line-height:1
+}
+.text-animation .letter{
+    display:inline-block;
+    opacity:0
+}
+.cursor{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#f5f5f5;
+    z-index:1
+}
+.isimler,.isler{
+    color:#fff;
+    font-family:takimdurum
+}
+.anlatimkutu{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    background-color:rgba(13,13,13,.4);
+    border-radius:21px;
+    width:68%;
+    height:454px
+}
+.logolar{
+    object-fit: contain;
+}
+.kutu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;        
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 400px;
+}
+.anlatici{
+    position:relative;
+    left:15%
+}
+.anlatimyazi{
+    width:100%;
+    position:absolute;
+    left:-2%;
+    padding:500px
+}
+.nasiloynanir {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: url("./resimler/bg2.png");
+    background-size: cover
+}
+.isimler{
+    font-size:29px;
+    font-family:Montserrat;
+    top:-7%;
+    position:relative
+}
+.insta{
+    position:relative;
+    margin-top:-11px
+}
+.back {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 35px;
+    margin: 35px
+}
+.hakkimizda{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    width:100%;
+    height:123%;
+    padding:250px;
+    background-size:cover!important;
+    background-repeat:no-repeat;
+    background-position:center;
+    background:url("./resimler/bg2.png")
+}
+.swiper{
+    width: 100%;
+    height: 80px;
+    margin: 20px;
+}
+.swiper-button-next,.swiper-button-prev {
+    color: rgb(27, 179, 57)!important;
+}
+.takimadigiris {
+    display: flex;
+    flex-direction: column;
+}
+
+.isimgiris {
+    font-size: 30px
+}
+
+.takimadisec {
+    color: #fff !important;
+    font-family: Montserrat, sans-serif;
+    background-color: rgb(27, 179, 57);
+    font-size: 33px;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 60px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+}
+input[type=color]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+  }
+  
+  input[type=color]::-webkit-color-swatch-wrapper {
+      border: none;
+      border-radius: 50%;
+      padding: 0;
+  }
+  #renkPaleti {
+    width: 50px;
+    height: 50px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.tekraroyna {
+    position: relative;
+    display: flex;
+    bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff !important;
+    font-family: Evogria, sans-serif;
+    background-color: #0000005c;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    height: 76px;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.651);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    font-size: 34px;
+}
+#takimlar {
+    font-size: 1.5rem;
+    font-family: Montserrat, sans-serif;
+    width: 412px;
+    height: 60px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.secimekrani{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center
+}
+.tablolar{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center
+}
+#sayac{
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.14);
+    /* border-radius: 12px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.125); */
+    transition: 0.3s;
+    display: flex
+;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    justify-content: center;
+    color: #fff;
+    font-family: Inter;
+    font-weight: bold;
+    width: 124px;
+    height: 48px;
+    border: 4px solid rgba(255, 255, 255, 0.125);
+    border-radius: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.birincitakim,.ikincitakim{    display: flex
+    ;
+        flex-direction: column;
+        gap: 10px;
+}
+#takimlar {
+    font-size: 1.5rem;
+    font-family: Montserrat, sans-serif;
+    width: 412px;
+    height: 60px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+#renk{
+    margin-top:11px;
+    height:82px;
+    margin-right:37px;
+    width:93px
+}
+.active{
+    display:flex
+}
+.disactive{
+    display:none!important
+}
+.ikikisi,.rastgele{
+    width:50%!important
+}
+.takimekrani {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+.dice{
+    background:url("./resimler/bg.png")
+}
+.oyun{
+    width: 100%;
+    height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+}
+.harita{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:200px
+}
+.btnn{
+    width:45%;
+    height:113px;
+    cursor:pointer;
+    border:1px solid #b7b7b7;
+    background-color:rgba(255,255,255,.15);
+    outline:0;
+    z-index:2;
+    border:none;
+    margin-top:40px;
+    transition:.2s ease-in-out
+}
+.sorukutu{
+    width: 600px;
+    z-index: 1;
+    display: flex
+    ;
+        flex-direction: column;
+        gap: 15px;
+}
+.sorusayi{
+    font-size: 22px;
+}
+.soruyazi{
+    font-size: 13px;
+}
+.soruSira{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+.cevaplar {
+    display: flex
+    ;
+        align-items: center;
+        justify-content: center;
+        width: 290px;
+        font-family: Poppins, sans-serif;
+        height: 60px;
+        text-align: center;
+        backdrop-filter: blur(14px) saturate(180%);
+        -webkit-backdrop-filter: blur(14px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        transition: 0.3s;
+        font-size: 13px;
+}
+
+.cevaplar:hover {
+    background-color: #56ff4773;
+    cursor: pointer
+}   

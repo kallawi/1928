@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1928</title>
+    <link rel="icon" type="image/x-icon" href="./resimler/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js" integrity="sha512-RdSPYh1WA6BF0RhpisYJVYkOyTzK4HwofJ3Q7ivt/jkpW6Vc8AurL1R+4AUcvn9IwEKAPm/fk7qFZW3OuiUDeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <img class="baslat" class="" src="./resimler/baslat.png" style="position: absolute;" alt="" srcset="">
+    <audio id="arkaplanmuzigi" loop>
+      <source src="./ses/arkaplan/muzik.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sesefekti">
+      <source src="" type="audio/mpeg">
+    </audio>
+    <div class="galip" style="display: none; align-items: center;
+    padding: 20px;
+    box-sizing: border-box;">
+       <div class="ustkisim">
+          <p class="galiptakim">AKINCILAR</p>
+       <p class="galipgeldi">GALIP GELDI</p>
+       
+    </div>
+       <img class="bugday" style="width: 175px;" src="./resimler/kupa.png"> 
+       <span class="tekraroyna">TEKRAR OYNA</span>
+    </div>
+    <div id="container">
+      <img src="./resimler/back.png" class="back">
+    <div class="anamenu">
+        <img src="./resimler/logo.png" class="logobuyuk" width="600px" alt="" srcset="">
+      <button class="menubtn"> OYNA </button>
+      <button class="menubtn"> NASIL OYNANIR? </button>
+    </div>
+    <div class="nasiloynanir" style="flex-direction: row;position: absolute;top: 0; left: 0; align-items: center; justify-content: center; gap: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+         <h1 style="font-family: Evogria;">Nasıl oynanır?</h1>
+         <p style="width: 800px;  backdrop-filter: blur(14px) saturate(180%);
+         -webkit-backdrop-filter: blur(14px) saturate(180%);
+         background-color: rgba(255, 255, 255, 0.14);
+         border-radius: 12px;
+         border: 1px solid rgb(128, 128, 128);font-family: Inter; font-size: 17px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         padding: 60px;">
+1928, sorulan sorulara doğru cevap vererek seçtiğiniz renkteki barı fulleyip kazanmaya çalıştığınız bir oyundur. Puanlara göre üstteki bar takımlara doğru ilerler. Barı dolduran kazanır! Üstelik oyunda jokerler de bulunmaktadır. Jokerleri kullanarak kendinize veya rakibinize karşı avantaj elde edebilirsiniz.
+      </p>
+      </div>
+
+   </div>
+      <div class="takimekrani">
+        <img src="./resimler/back.png" class="back">
+        <div class="kutu">
+           <div style="display: flex; flex-direction: row; align-items: center; width: 100%; justify-content: space-between;">
+              <p>1. TAKIMI SEÇİN</p>
+              <div id="div2">
+                 <input type="color" id="renkPaleti" value="#ff0000">
+              </div>
+           </div>
+           <div class="swiper">
+              <div class="swiper-wrapper">
+                 <img src="./resimler/logolar/1.png" class="swiper-slide logolar" alt="" srcset="">
+                 <img src="./resimler/logolar/2.png" class="swiper-slide logolar" alt="" srcset="">
+                 <img src="./resimler/logolar/3.png" class="swiper-slide logolar" alt="" srcset="">
+                 <img src="./resimler/logolar/4.png" class="swiper-slide logolar" alt="" srcset="">
+                 <img src="./resimler/logolar/5.png" class="swiper-slide logolar" alt="" srcset="">
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+           </div>
+           <div class="takimadigiris">
+              <select id="takimlar" name="takimlar">
+                <option value="Yedi Meşaleciler" class="Yedi Meşaleciler">Yedi Meşaleciler</option> <option value="Cumhuriyetçiler" class="Cumhuriyetçiler">Cumhuriyetçiler</option> <option value="Tanzimatçılar" class="Tanzimatçılar">Tanzimatçılar</option> <option value="Divancılar" class="Divancılar">Divancılar</option>
+              </select>
+              <button class="btn takimadisec" type="button" id="button-addon2">Seç</button> 
+           </div>
+        </div>
+     </div>
+<!--     <div class="takimekrani ">
+      <img src="./resimler/back.png" class="back" onclick="openclose('close','.takimekrani');openclose('open','.hosgeldiniz');openclose('open','.logobuyuk')">
+      <div style="width: 100%; margin-bottom: 6%; height: 313px; background-color: rgba(0,0,0,0.2); position: absolute; "></div>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <p class="text-light" style="font-size: 60px!important; font-family: 'Gretaros'; margin-bottom:0!important;">AMBLEMINIZ</p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <img src="./resimler/logolar/1.png" class="swiper-slide logolar" width="300px" alt="" srcset="">
+            <img src="./resimler/logolar/2.png" class="swiper-slide logolar" width="300px" alt="" srcset="">
+            <img src="./resimler/logolar/3.png" class="swiper-slide logolar" width="300px" alt="" srcset="">
+            <img src="./resimler/logolar/4.png" class="swiper-slide logolar" width="300px" alt="" srcset="">
+            <img src="./resimler/logolar/5.png" class="swiper-slide logolar" width="300px" alt="" srcset="">
+          </div>
+          <div class="swiper-pagination" style="--swiper-theme-color: #b3620e;"></div>
+          <div class="swiper-button-prev" style="--swiper-theme-color: #ff8200;"></div>
+          <div class="swiper-button-next" style="--swiper-theme-color: #ff8200;"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="btn-group mb-3 takimadigiris">
+          <input type="color" id="renk" name="favcolor" value="#ff0000">
+          <select id="takimlar" name="takimlar">
+            <option value="Yedi Meşaleciler" class="Yedi Meşaleciler">Yedi Meşaleciler</option>
+            <option value="Cumhuriyetçiler" class="Cumhuriyetçiler">Cumhuriyetçiler</option>
+            <option value="Tanzimatçılar" class="Tanzimatçılar">Tanzimatçılar</option>
+            <option value="Divancılar" class="Divancılar">Divancılar</option>
+          </select>
+          <button class="btn takimadisec" type="button" id="button-addon2">Seç</button>
+        </div>
+      </div>
+    </div> -->
+    <div class="oyun ">
+      
+      <div style="    width: 100%;
+      display: flex
+  ;
+      flex-direction: row;
+      justify-content: space-between;align-items: center;width: 70%;">
+        <div class="birincitakim ">
+          <div class="takimisim"></div>
+            
+          <div style="display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;gap: 20px;">
+            <img class="takimresim" style="width: 60px; height: 60px;"></img>
+            <img width="25px" src="./resimler/coin.png">
+            <h1 style="font-family: Inter;" class="takim1para">0</h1>
+          </div>
+          </div>
+          
+      <span id="sayac">45</span>
+          
+          <div class="ikincitakim">
+            
+            <div class="takimisim"></div>
+            
+            <div style="display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;gap: 20px;">
+              <img class="takimresim" style="width: 60px; height: 60px;"></img>
+              <img width="25px" src="./resimler/coin.png">
+              <h1 style="font-family: Inter;" class="takim2para">0</h1>
+            </div>
+          </div>
+      </div>
+      
+      <div style="display: flex; flex-direction: row; gap: 10px; width: 70%;
+    align-items: center;justify-content: center;">
+
+        <img src="./resimler/sorudegistir.png" width="60px" class="sorudegistir">
+        <h2>40</h2>
+        <img src="./resimler/15sn.png" width="60px" class="15sn">
+        <h2>30</h2>
+        <img src="./resimler/eksi10.png" width="60px" class="eksi10">
+        <h2>20</h2>
+      </div>
+      <div style="position: relative;justify-content: center;
+      align-items: center;
+      display: flex
+  ;
+      width: 600px;
+      position: relative;">
+            <h2 class="takim1puan" style="position: absolute;
+            left: 35px;
+            font-size: 20px;
+            font-family: Inter;">
+              0
+            </h2>
+      <div class="bar2">
+        <div class="bar1"></div>
+
+      </div>
+
+      
+      <h2 class="takim2puan" style="position: absolute;
+      right: 35px;
+      font-size: 20px;
+      font-family: Inter;">
+        0
+      </h2>
+    </div>
+      <div class="sorukutu">
+
+        <div style="        backdrop-filter: blur(14px) saturate(180%);
+        -webkit-backdrop-filter: blur(14px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);padding: 20px;">
+        <h5 class="sorusayi">Soru 1</h5>
+        <div class="soruyazi">Istanbul ne zaman feth edildi?</div>
+      </div>
+           <div class="soruSira">
+              <div class="cevaplar">1451</div>
+              <div class="cevaplar">1452</div>
+              <div class="cevaplar">1453</div>
+              <div class="cevaplar">1454</div>
+           </div>
+  </div>
+      <!-- <div class="padisahsozu "><img src="./resimler/semih.png" class="semih" height="100px"><p class="fs-3 text-light soz">-</p></div>-->
+    </div>
+</div>
+    <div class="dogru">
+        <img src="./resimler/yesillogokucuk.png" width="70px"> 
+         <p class="dyyazi">DOĞRU CEVAP!</p>
+         <div class="yenisoru">YENİ SORU</div>
+      </div>
+      <div class="yanlis">
+        <img src="./resimler/kirmizilogokucuk.png" width="70px"> 
+         <p class="dyyazi">YANLIŞ YANIT VERDİNİZ!</p>
+         <div class="yenisoru">YENİ SORU</div>
+      </div>
+      <div class="surebitti">
+         <img src="./resimler/surebitti.png" width="70px"> 
+         <p class="dyyazi">SÜRE DOLDU!</p>
+         <div class="yenisoru">YENİ SORU</div>
+      </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
